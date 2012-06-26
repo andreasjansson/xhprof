@@ -59,7 +59,7 @@ class Db_Pdo extends Db_Abstract
     
     public static function getNextAssoc($resultSet)
     {
-        return $resultSet->fetch();
+        return $resultSet ? $resultSet->fetch() : NULL;
     }
     
     public function escape($str)
